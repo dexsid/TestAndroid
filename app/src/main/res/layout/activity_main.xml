@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Результат:"
+        app:layout_constraintEnd_toEndOf="@+id/t1"
+        app:layout_constraintStart_toStartOf="@+id/t1"
+        app:layout_constraintTop_toBottomOf="@+id/t1" />
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Сложить"
+        app:layout_constraintEnd_toEndOf="@+id/t2"
+        app:layout_constraintStart_toStartOf="@+id/t2"
+        app:layout_constraintTop_toBottomOf="@+id/t2" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Умножить"
+        app:layout_constraintEnd_toEndOf="@+id/b1"
+        app:layout_constraintStart_toStartOf="@+id/b1"
+        app:layout_constraintTop_toBottomOf="@+id/b1" />
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Отнять"
+        app:layout_constraintEnd_toEndOf="@+id/b2"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/b2"
+        app:layout_constraintTop_toBottomOf="@+id/b2" />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="164dp"
+        android:text="Числа 26 и 6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Разделить"
+        app:layout_constraintEnd_toEndOf="@+id/b3"
+        app:layout_constraintStart_toStartOf="@+id/b3"
+        app:layout_constraintTop_toBottomOf="@+id/b3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
