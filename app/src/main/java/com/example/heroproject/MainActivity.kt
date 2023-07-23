@@ -11,31 +11,31 @@ import com.example.heroproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var bClass: ActivityMainBinding
-    val a:Byte = 26
-    val b:Byte = 6
+    val maxPerson = 90
+    var currentPerson = 26
 
     override fun onCreate(s: Bundle?) {
         super.onCreate(s)
         bClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bClass.root)
-        var result = 0
-        var textResult = "Результат: "
+
 
         bClass.b1.setOnClickListener{
-            result = a + b
-            bClass.t2.text = "Результат: $result"
+           if(maxPerson > currentPerson){
+               bClass.t2.text = "Можно работать"
+            }
+           else
+               bClass.t2.text = "Входить новым покупателям запрещено"
         }
         bClass.b2.setOnClickListener{
-            result = a * b
-            bClass.t2.text = "Результат: $result"
+            currentPerson = 120
+
         }
         bClass.b3.setOnClickListener{
-            result = a - b
-            bClass.t2.text = "Результат: $result"
+
         }
         bClass.b4.setOnClickListener{
-            result = a / b
-            bClass.t2.text = "Результат: $result"
+
         }
 
     }
