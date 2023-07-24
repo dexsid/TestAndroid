@@ -4,67 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/t2"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Результат:"
-        app:layout_constraintEnd_toEndOf="@+id/t1"
-        app:layout_constraintStart_toStartOf="@+id/t1"
-        app:layout_constraintTop_toBottomOf="@+id/t1" />
-
-    <Button
-        android:id="@+id/b1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Сложить"
-        app:layout_constraintEnd_toEndOf="@+id/t2"
-        app:layout_constraintStart_toStartOf="@+id/t2"
-        app:layout_constraintTop_toBottomOf="@+id/t2" />
-
-    <Button
-        android:id="@+id/b2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Умножить"
-        app:layout_constraintEnd_toEndOf="@+id/b1"
-        app:layout_constraintStart_toStartOf="@+id/b1"
-        app:layout_constraintTop_toBottomOf="@+id/b1" />
-
-    <Button
-        android:id="@+id/b3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Отнять"
-        app:layout_constraintEnd_toEndOf="@+id/b2"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="@+id/b2"
-        app:layout_constraintTop_toBottomOf="@+id/b2" />
-
-    <TextView
-        android:id="@+id/t1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
-        android:text="Числа 26 и 6"
+        android:layout_marginTop="252dp"
+        android:text="Введите имя и получите зарплату"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/b4"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/edValue"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Разделить"
-        app:layout_constraintEnd_toEndOf="@+id/b3"
-        app:layout_constraintStart_toStartOf="@+id/b3"
-        app:layout_constraintTop_toBottomOf="@+id/b3" />
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#000000"
+        android:ems="10"
+        android:hint=" Имя"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHighlight="#000000"
+        android:textColorHint="@color/cardview_dark_background"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edValue2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:backgroundTint="#000000"
+        android:ems="10"
+        android:hint="Пароль"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHighlight="#000000"
+        android:textColorHint="@color/cardview_dark_background"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/edValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edValue"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@color/teal_700"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/edValue2"
+        app:layout_constraintStart_toStartOf="@+id/edValue2"
+        app:layout_constraintTop_toBottomOf="@+id/edValue2" />
+
+    <Button
+        android:id="@+id/btResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="124dp"
+        android:text="Забрать получку"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edValue"
+        app:layout_constraintTop_toBottomOf="@+id/tvAnswer" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

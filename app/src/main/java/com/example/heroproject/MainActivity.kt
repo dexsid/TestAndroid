@@ -11,33 +11,50 @@ import com.example.heroproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var bClass: ActivityMainBinding
-    val maxPerson = 90
-    var currentPerson = 26
 
     override fun onCreate(s: Bundle?) {
         super.onCreate(s)
         bClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bClass.root)
+        bClass.btResult.setOnClickListener {
+            val result = bClass.edValue.text.toString()
+            bClass.tvAnswer.visibility = View.VISIBLE
+            val tempText = ""
 
+            when (result) {
 
-        bClass.b1.setOnClickListener{
-           if(maxPerson > currentPerson){
-               bClass.t2.text = "Можно работать"
+                Constance.DVORNIK -> {
+                    val temptext = "На вашу карту начисленно ${Constance.DVORNIK_SUELDO}"
+                    bClass.tvAnswer.text = if (bClass.edValue2.text.toString() == Constance.DVORNIK_PASSWORD) {
+                        temptext
+                    }else {
+                        "Не верный пароль"
+                    }
+
+                }
+                Constance.BOSS -> {
+                    val temptext = "На вашу карту начисленно ${Constance.BOSS_SUELDO}"
+                    bClass.tvAnswer.text = if (bClass.edValue2.text.toString() == Constance.BOSS_PASSWORD) {
+                        temptext
+                    }else {
+                        "Не верный пароль"
+                    }
+
+                }
+                Constance.MEGABOSS -> {
+                    val temptext = "На вашу карту начисленно ${Constance.MEGABOSS_SUELDO}"
+                    bClass.tvAnswer.text = if (bClass.edValue2.text.toString() == Constance.MEGABOSS_PASSWORD) {
+                        temptext
+                    }else {
+                        "Не верный пароль"
+                    }
+                }
+                else -> {
+                    bClass.tvAnswer.text = "Вы не являетесь сотрудником"
+                }
             }
-           else
-               bClass.t2.text = "Входить новым покупателям запрещено"
-        }
-        bClass.b2.setOnClickListener{
-            currentPerson = 120
 
         }
-        bClass.b3.setOnClickListener{
-
-        }
-        bClass.b4.setOnClickListener{
-
-        }
-
     }
 
 
