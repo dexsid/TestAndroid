@@ -1,4 +1,13 @@
 <resources>
-    <string name="app_name">HeroProject</string>
-    <string name="Hello">Hello</string>
+    <string name="app_name" translatable="false">HeroProject</string>
+    <string name="sign_in" translatable="false">Sign in</string>
+    <string name="sign_up" translatable="false">Sign up</string>
+    <string name="avatar" translatable="false">Avatar</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="name" translatable="false">Name</string>
+    <string name="last_name" translatable="false">Last name</string>
+    <string name="surname" translatable="false">Surname</string>
+    <string name="done" translatable="false">Save</string>
+
 </resources>
